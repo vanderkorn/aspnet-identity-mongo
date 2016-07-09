@@ -250,6 +250,12 @@
 			return Task.FromResult(0);
 		}
 
-		public virtual IQueryable<TUser> Users => _Users.AsQueryable();
+	    public virtual IQueryable<TUser> Users
+	    {
+	        get
+	        {
+                return _Users.AsQueryable();
+	        }
+	    } 
 	}
 }

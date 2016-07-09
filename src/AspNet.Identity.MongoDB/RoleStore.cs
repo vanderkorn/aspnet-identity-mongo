@@ -51,6 +51,13 @@
 			return _Roles.Find(r => r.Name == roleName).FirstOrDefaultAsync();
 		}
 
-		public virtual IQueryable<TRole> Roles => _Roles.AsQueryable();
+	    public virtual IQueryable<TRole> Roles
+	    {
+	        get
+            {
+               return _Roles.AsQueryable();
+	            
+	        }
+	    } 
 	}
 }

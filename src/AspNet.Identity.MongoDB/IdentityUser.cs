@@ -18,8 +18,8 @@
 			Claims = new List<IdentityUserClaim>();
 		}
 
-		[BsonRepresentation(BsonType.ObjectId)]
-		public string Id { get; set; }
+        [BsonId]
+        public string Id { get; set; }
 
 		public string UserName { get; set; }
 
